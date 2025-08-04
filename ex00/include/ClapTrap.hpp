@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 21:06:49 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/04 23:04:02 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/04 23:54:20 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ class ClapTrap
 {
 private:
 	std::string m_name;
-	int m_hitPoints; // health points, очки здоровья
-	int m_energyPoints; // очки энергии, энергия для атаки
-	int m_attackDamage; //урон от атаки
+	unsigned int m_hitPoints; // health points, очки здоровья
+	unsigned int m_energyPoints; // очки энергии, энергия для атаки
+	unsigned int m_attackDamage; //урон от атаки
 
 public:
 	ClapTrap();
 	ClapTrap(const std::string &name); // Constructor with name parameter
 	ClapTrap(const ClapTrap &src); // Copy constructor src = other object being copied
-	ClapTrap &operator+(const ClapTrap &rhs); // Copy assignment operator rhs = object being assigned
+	ClapTrap &operator=(const ClapTrap &rhs); // Copy assignment operator rhs = object being assigned
 	~ClapTrap();
 	
 	void attack(const std::string& target); // Target is the name of the object being attacked
