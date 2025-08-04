@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 23:27:17 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/04 22:59:03 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/04 23:21:25 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ClapTrap::ClapTrap(const ClapTrap& other) : m_name(other.m_name), m_hitPoints(ot
 	std::cout << "ClapTrap copy constructor called for " << m_name << std::endl;
 }
 
-ClapTrap& ClapTrap::operator+(const ClapTrap& rhs) 
+ClapTrap& ClapTrap::operator=(const ClapTrap& rhs) 
 {
 	if (this != &rhs) // Check for self-assignment
 	{
@@ -38,6 +38,7 @@ ClapTrap& ClapTrap::operator+(const ClapTrap& rhs)
 	}
 	return *this;
 }
+
 ClapTrap::~ClapTrap() 
 {
 	std::cout << "ClapTrap destructor called for " << m_name << std::endl;
@@ -89,3 +90,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << m_name << " has no energy left to repair!" << std::endl;
 	}
 }
+
+/*
+Overloading	- Same name, different parameters, in the same class.
+Overriding	- Redefines a virtual function from a base class in a derived class /subclass/childclass.
+*/
