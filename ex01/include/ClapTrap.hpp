@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 21:06:49 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/05 00:03:11 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/06 16:55:01 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Overriding	- Redefines a virtual function from a base class in a derived class /
 
 class ClapTrap
 {
-private:
+protected:
 	std::string m_name;
 	unsigned int m_hitPoints; // health points
 	unsigned int m_energyPoints; //
