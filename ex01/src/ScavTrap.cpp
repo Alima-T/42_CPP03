@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/06 17:01:35 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/06 17:08:00 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,24 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap destructor called for " << m_name << std::endl;
 }
+
+void ScavTrap::attack(const std::string& target)
+{
+	if(m_hitPoints > 0 || m_energyPoints > 0)
+	{
+		m_energyPoints--;
+		std::cout << "ScavTrap " << m_name << " attacks " << target << ", causing "
+				  << m_attackDamage << " points of damage!" << std::endl;
+	}
+	else
+	{
+		std::cout << "ScavTrap " << m_name << " can't attack without energy or hitpoints!"
+				  << " Energy: " << m_energyPoints << ", Hit Points: " << m_hitPoints << std::endl;
+		return;
+	}
+}
+void ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap " << m_name << " is now in guard mode." << std::endl;
+}	
+
