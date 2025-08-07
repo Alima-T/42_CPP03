@@ -6,11 +6,10 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 18:38:57 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/07 11:11:34 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/07 14:10:22 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ClapTrap.hpp"
 #include "../include/ScavTrap.hpp"
 #include <iostream>
 

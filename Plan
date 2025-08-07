@@ -39,3 +39,26 @@ Create FragTrap.hpp and FragTrap.cpp.
 Inherit from ClapTrap, set custom constructor, destructor, and attributes.
 Add highFivesGuys() method.
 Test in main.cpp: create FragTrap, call methods.
+
+Requirements for DiamondTrap monster: a ClapTrap that’s half FragTrap, half ScavTrap.
+Class Inheritance:
+DiamondTrap inherits from both ScavTrap and FragTrap.
+ScavTrap and FragTrap both inherit from ClapTrap.
+
+Attributes:
+DiamondTrap has a private attribute name (same name as in ClapTrap, but it's a different variable).
+
+In constructor, initialize:
+DiamondTrap::name → parameter as-is
+ClapTrap::name → parameter + "_clap_name"
+
+Values taken from parents:
+Hit Points → from FragTrap
+Energy Points → from ScavTrap
+Attack Damage → from FragTrap
+attack() function → from ScavTrap
+
+Own Method:
+void whoAmI();
+Prints DiamondTrap::name and ClapTrap::name
+Only one ClapTrap must be constructed.
