@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:15:10 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/07 13:15:36 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/07 13:29:38 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string m_name;
 	unsigned int m_hitPoints; // health points, очки здоровья
 	unsigned int m_energyPoints; // очки энергии, энергия для атаки
