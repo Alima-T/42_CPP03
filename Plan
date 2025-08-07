@@ -1,0 +1,41 @@
+Plan for ClapTrap (ex00)
+Define class in ClapTrap.hpp
+Private: _name, _hitPoints, _energyPoints, _attackDamage
+Public methods: attack, takeDamage, beRepaired, constructors, destructor, assignment
+Implement methods in ClapTrap.cpp
+Handle energy and HP logic
+Print status messages
+Add copy constructor and assignment operator
+
+main.cpp
+Create ClapTrap objects
+Call all functions to test behavior
+Test copy and assignment
+
+Test:
+
+No HP/energy cases
+Damage/repair logic
+Copy and assign correctness
+
+ex01
+ Plan of Work
+Update ClapTrap
+Ensure attributes are protected for inheritance.
+Add/keep constructors, destructor, copy/assign logic.
+
+ScavTrap
+Inherit from ClapTrap.
+Implement custom constructors, destructor, attack().
+Add method guardGate().
+
+main.cpp
+Test all constructors, copy, assignment, destruction.
+Test attack(), guardGate(), damage and repair.
+
+ex03
+Copy ClapTrap files from ex01(with protected access) into ex02/.
+Create FragTrap.hpp and FragTrap.cpp.
+Inherit from ClapTrap, set custom constructor, destructor, and attributes.
+Add highFivesGuys() method.
+Test in main.cpp: create FragTrap, call methods.
