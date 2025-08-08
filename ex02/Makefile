@@ -6,7 +6,7 @@
 #    By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/31 20:10:20 by aokhapki          #+#    #+#              #
-#    Updated: 2025/08/07 13:31:51 by aokhapki         ###   ########.fr        #
+#    Updated: 2025/08/08 17:38:03 by aokhapki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ INC_DIR = include
 NAME = flaptrap
 
 # Files listed manually
-SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/FlapTrap.cpp
-OBJS = $(OBJ_DIR)/main.o $(OBJ_DIR)/ClapTrap.o $(OBJ_DIR)/FlapTrap.o
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/FragTrap.cpp
+OBJS = $(OBJ_DIR)/main.o $(OBJ_DIR)/ClapTrap.o $(OBJ_DIR)/FragTrap.o
 
 # Compiler
 CXX = c++

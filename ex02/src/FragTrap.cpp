@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/07 13:52:31 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/08 17:43:43 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ FragTrap::FragTrap() : ClapTrap("FragTrap_default")
 	std::cout << "FragTrap default constructor called for " << m_name << std::endl;
 }
 
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string& name) : ClapTrap (name)
 {
 	m_hitPoints = 100;
 	m_energyPoints = 50;

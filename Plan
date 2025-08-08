@@ -50,7 +50,7 @@ DiamondTrap has a private attribute name (same name as in ClapTrap, but it's a d
 
 In constructor, initialize:
 DiamondTrap::name → parameter as-is
-ClapTrap::name → parameter + "_clap_name"
+ClapTrap::name → parameter + "m_clap_name"
 
 Values taken from parents:
 Hit Points → from FragTrap

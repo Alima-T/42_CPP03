@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 23:27:17 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/04 23:36:40 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/08 14:30:23 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,18 @@ ClapTrap::ClapTrap() : m_name("Default"), m_hitPoints(10), m_energyPoints(10), m
 	std::cout << "ClapTrap default constructor called for " << m_name << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : m_name(name), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0) 
+ClapTrap::ClapTrap(const std::string& name) : m_name(name),
+											m_hitPoints(10),
+											m_energyPoints(10),
+											m_attackDamage(0)
 {
 	std::cout << "ClapTrap parameterized constructor called for " << m_name << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) : m_name(other.m_name), m_hitPoints(other.m_hitPoints), m_energyPoints(other.m_energyPoints), m_attackDamage(other.m_attackDamage) 
+ClapTrap::ClapTrap(const ClapTrap& src) : m_name(src.m_name),
+										m_hitPoints(src.m_hitPoints),
+										m_energyPoints(src.m_energyPoints),
+										m_attackDamage(src.m_attackDamage)
 {
 	std::cout << "ClapTrap copy constructor called for " << m_name << std::endl;
 }
