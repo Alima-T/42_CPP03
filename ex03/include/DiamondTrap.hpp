@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 14:14:04 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/08 14:46:11 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/11 23:11:47 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ private:
 public:
 	DiamondTrap();
 	DiamondTrap(const std::string& m_name);
-	DiamondTrap(const FragTrap& src);
-	DiamondTrap& operator=(const FragTrap& rhs);
+	DiamondTrap(const DiamondTrap& src);
+	DiamondTrap& operator=(const DiamondTrap& rhs);
 	~DiamondTrap();
 
-	void attack(const std::string& target); // from from ScavTrap
+	// void attack(const std::string& target); // from from ScavTrap
 	void whoAmI(); //own
 };
 
