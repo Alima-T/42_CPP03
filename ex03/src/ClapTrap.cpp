@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:15:18 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/07 13:15:33 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/11 23:52:15 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
 		m_energyPoints = rhs.m_energyPoints;
 		m_attackDamage = rhs.m_attackDamage;
 	}
+	std::cout << "ClapTrap copy assignment operator called\n";
 	return *this;
 }
 
@@ -54,8 +55,8 @@ void ClapTrap::attack(const std::string& target)
 	}
 	else
 	{
-		std::cout << "ClapTrap " << m_name << " can't attack without energy or hitpoints!" 
-				  << "Energy: " << m_energyPoints << ", Hit Points: " << m_hitPoints << std::endl;
+		std::cout << "ClapTrap " << m_name << " can't attack without EnergyPoints or HitPoints!" 
+				  << "Energy: " << m_energyPoints << ", HitPoints: " << m_hitPoints << std::endl;
 		return;
 	}
 }
@@ -67,12 +68,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 		// condition ? value_if_true : value_if_false, ensure we don't go below zero
 		unsigned int damage = (amount > m_hitPoints) ? m_hitPoints : amount; 
 		m_hitPoints -= damage;
-		std::cout << "ClapTrap " << m_name << " takes " << damage << " points of damage! Remaining hit points: " 
+		std::cout << "ClapTrap " << m_name << " takes " << damage << " points of damage! Remaining HitPoints: " 
 				  << m_hitPoints << std::endl;
 	}
 	else
 	{
-		std::cout << "ClapTrap " << m_name << " is destroyed and has no hit points to take damage!" << std::endl;
+		std::cout << "ClapTrap " << m_name << " has no HitPoints to take damage!" << std::endl;
 		return;
 	}
 }
@@ -83,11 +84,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 		m_energyPoints--;
 		m_hitPoints += amount;
 		std::cout << "ClapTrap " << m_name << " repairs itself for " << amount 
-				  << " hit points! Current hit points: " << m_hitPoints << std::endl;
+				  << " HitPoints:! Current HitPoints: " << m_hitPoints << std::endl;
 	}
 	else
 	{
-		std::cout << "ClapTrap " << m_name << " has no energy left to repair!" << std::endl;
+		std::cout << "ClapTrap " << m_name << " has no EnergyPoints left to repair!" << std::endl;
 	}
 }
 

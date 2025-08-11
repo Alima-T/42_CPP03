@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/07 13:52:31 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/11 23:53:20 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@
 FragTrap::FragTrap() : ClapTrap("FragTrap_default")
 {
 	m_hitPoints = 100; // more hit points
-	m_energyPoints = 50; // more energy points
-	m_attackDamage = 20; // more attack damage
+	m_energyPoints = 100; // more energy points
+	m_attackDamage = 30; // more attack damage
 	std::cout << "FragTrap default constructor called for " << m_name << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
 	m_hitPoints = 100;
-	m_energyPoints = 50;
-	m_attackDamage = 20;
+	m_energyPoints = 100;
+	m_attackDamage = 30;
 	std::cout << "FragTrap parameterized constructor called for " << m_name << std::endl;
 }
 
@@ -55,11 +55,11 @@ void FragTrap::highFivesGuys(void)
 {
 	if (m_hitPoints > 0 && m_energyPoints > 0)
 	{
-		std::cout << "FragTrap " << m_name << " requests a high five!" << std::endl;
+		std::cout << "FragTrap " << m_name << " requests a HighFive!" << std::endl;
 	}
 	else
 	{
-		std::cout << "FragTrap " << m_name << " can't request a high five without energy or hitpoints!" 
-				  << "Energy: " << m_energyPoints << ", Hit Points: " << m_hitPoints << std::endl;
+		std::cout << "FragTrap " << m_name << " can't request a HighFive without EnergyPoints or HitPoints!" 
+				  << " Energy: " << m_energyPoints << ", HitPoints: " << m_hitPoints << std::endl;
 	}
 }

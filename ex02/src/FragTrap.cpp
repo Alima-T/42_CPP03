@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/08 17:43:43 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/11 23:42:54 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ void FragTrap::highFivesGuys(void)
 {
 	if (m_hitPoints > 0 && m_energyPoints > 0)
 	{
-		std::cout << "FragTrap " << m_name << " requests a high five!" << std::endl;
+		std::cout << "FragTrap " << m_name << " requests a HighFive!" << std::endl;
 	}
 	else
 	{
-		std::cout << "FragTrap " << m_name << " can't request a high five without energy or hitpoints!" 
-				  << "Energy: " << m_energyPoints << ", Hit Points: " << m_hitPoints << std::endl;
+		std::cout << "FragTrap " << m_name << " can't request a HighFive without EnergyPoints or HitPoints!" 
+				  << " Energy: " << m_energyPoints << ", HitPoints: " << m_hitPoints << std::endl;
 	}
 }

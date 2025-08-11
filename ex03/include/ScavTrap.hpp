@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:42:30 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/08 14:24:53 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/11 21:08:32 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"  // Наследуем всё из ClapTrap
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 public:
 	ScavTrap();                              // Конструктор по умолчанию
