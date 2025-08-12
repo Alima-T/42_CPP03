@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:16:17 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/08 17:55:49 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/12 22:10:26 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	FragTrap& operator=(const FragTrap& other);
 	~FragTrap();
 
+	void attack(const std::string& m_name);
 	void highFivesGuys(void);
 };
 

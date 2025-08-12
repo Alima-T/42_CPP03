@@ -6,7 +6,7 @@
 #    By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/31 20:10:20 by aokhapki          #+#    #+#              #
-#    Updated: 2025/08/08 17:38:03 by aokhapki         ###   ########.fr        #
+#    Updated: 2025/08/12 21:23:16 by aokhapki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 SRC_DIR = src
 OBJ_DIR = obj
 INC_DIR = include
-NAME = flaptrap
+NAME = fragtrap
 
 # Files listed manually
 SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/FragTrap.cpp

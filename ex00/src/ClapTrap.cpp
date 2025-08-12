@@ -6,13 +6,16 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 23:27:17 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/08 14:30:23 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/12 21:38:15 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : m_name("Default"), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0) 
+ClapTrap::ClapTrap() : m_name("Default"),
+					m_hitPoints(10),
+					m_energyPoints(10),
+					m_attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called for " << m_name << std::endl;
 }
@@ -52,7 +55,7 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-	if(m_hitPoints > 0 || m_energyPoints > 0)
+	if(m_hitPoints > 0 && m_energyPoints > 0)
 	{
 		m_energyPoints--;
 		std::cout << "ClapTrap " << m_name << " attacks " << target << ", causing " 
@@ -84,12 +87,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if(m_energyPoints > 0 || m_hitPoints > 0)
+	if(m_energyPoints > 0)
 	{
 		m_energyPoints--;
 		m_hitPoints += amount;
 		std::cout << "ClapTrap " << m_name << " repairs itself for " << amount 
-				  << " hit points! Current hit points: " << m_hitPoints << std::endl;
+				  << " HitPoints! Current HitPoints: " << m_hitPoints << std::endl;
 	}
 	else
 	{

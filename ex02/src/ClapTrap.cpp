@@ -5,31 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 13:15:18 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/11 23:51:03 by aokhapki         ###   ########.fr       */
+/*   Created: 2025/07/31 23:27:17 by aokhapki          #+#    #+#             */
+/*   Updated: 2025/08/12 22:01:50 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : m_name("Default"), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0) 
+ClapTrap::ClapTrap() : m_name("Default"),
+					m_hitPoints(10),
+					m_energyPoints(10),
+					m_attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called for " << m_name << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : m_name(name), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0) 
+ClapTrap::ClapTrap(const std::string& name) : m_name(name),
+											m_hitPoints(10),
+											m_energyPoints(10),
+											m_attackDamage(0)
 {
 	std::cout << "ClapTrap parameterized constructor called for " << m_name << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) : m_name(other.m_name), m_hitPoints(other.m_hitPoints), m_energyPoints(other.m_energyPoints), m_attackDamage(other.m_attackDamage) 
+ClapTrap::ClapTrap(const ClapTrap& src) : m_name(src.m_name),
+										m_hitPoints(src.m_hitPoints),
+										m_energyPoints(src.m_energyPoints),
+										m_attackDamage(src.m_attackDamage)
 {
 	std::cout << "ClapTrap copy constructor called for " << m_name << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& rhs) 
 {
-	if (this != &rhs) // Check for self-assignment
+	if (this != &rhs)
 	{
 		m_name = rhs.m_name;
 		m_hitPoints = rhs.m_hitPoints;
@@ -46,7 +55,7 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-	if(m_hitPoints > 0 || m_energyPoints > 0)
+	if(m_hitPoints > 0 && m_energyPoints > 0)
 	{
 		m_energyPoints--;
 		std::cout << "ClapTrap " << m_name << " attacks " << target << ", causing " 
@@ -54,8 +63,8 @@ void ClapTrap::attack(const std::string& target)
 	}
 	else
 	{
-		std::cout << "ClapTrap " << m_name << " can't attack without Energy or HitPoints!" 
-				  << "Energy: " << m_energyPoints << ", HitPoints: " << m_hitPoints << std::endl;
+		std::cout << "ClapTrap " << m_name << " can't attack without energy or hitpoints!" 
+				  << "Energy: " << m_energyPoints << ", Hit Points: " << m_hitPoints << std::endl;
 		return;
 	}
 }
@@ -78,12 +87,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if(m_energyPoints > 0 || m_hitPoints > 0)
+	if(m_energyPoints > 0)
 	{
 		m_energyPoints--;
 		m_hitPoints += amount;
 		std::cout << "ClapTrap " << m_name << " repairs itself for " << amount 
-				  << " hit points! Current hit points: " << m_hitPoints << std::endl;
+				  << " HitPoints! Current HitPoints: " << m_hitPoints << std::endl;
 	}
 	else
 	{
@@ -91,7 +100,3 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 }
 
-/*
-Overloading	- Same name, different parameters, in the same class.
-Overriding	- Redefines a virtual function from a base class in a derived class /subclass/childclass.
-*/
