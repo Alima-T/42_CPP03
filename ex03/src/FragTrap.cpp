@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/12 22:22:55 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/15 17:55:03 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,29 @@
 FragTrap::FragTrap() : ClapTrap ()
 {
 	m_hitPoints = 100;
-	m_energyPoints = 50;
-	m_attackDamage = 20;
+	m_energyPoints = 100;
+	m_attackDamage = 30;
 	std::cout << "FragTrap default constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
 	m_hitPoints = 100;
-	m_energyPoints = 50;
-	m_attackDamage = 20;
+	m_energyPoints = 100;
+	m_attackDamage = 30;
 	std::cout << "FragTrap parameterized constructor called for " << m_name << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
+FragTrap::FragTrap(const FragTrap& src) : ClapTrap(src)
 {
 	std::cout << "FragTrap copy constructor called for " << m_name << std::endl;
 }
 // we don't implement the copy assignment operator here, use the one from ClapTrap
-FragTrap& FragTrap::operator=(const FragTrap& other)
+FragTrap& FragTrap::operator=(const FragTrap& rhs)
 {
-	if (this != &other) // Check for self-assignment
+	if (this != &rhs) // Check for self-assignment
 	{
-		ClapTrap::operator=(other);
+		ClapTrap::operator=(rhs);
 	}
 	std::cout << "FragTrap copy assignment operator called\n";
 	return *this;
@@ -76,4 +76,13 @@ void FragTrap::highFivesGuys(void)
 		std::cout << "FragTrap " << m_name << " can't request a HighFive without EnergyPoints or HitPoints!" 
 				  << " Energy: " << m_energyPoints << ", HitPoints: " << m_hitPoints << std::endl;
 	}
+}
+unsigned int FragTrap::getHitPoints() const
+{
+    return m_hitPoints;
+}
+
+unsigned int FragTrap::getAttackDamage() const
+{
+    return m_attackDamage;
 }

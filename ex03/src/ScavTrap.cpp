@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/12 22:01:16 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/15 16:09:53 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 	std::cout << "ScavTrap parameterized constructor called for " << m_name << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap copy constructor called for " << m_name << std::endl;
 }
 // we don't implement the copy assignment operator here, use the one from ClapTrap
-ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+ScavTrap& ScavTrap::operator=(const ScavTrap& rhs)
 {
-	if (this != &other)
+	if (this != &rhs)
 	{
-		ClapTrap::operator=(other);
+		ClapTrap::operator=(rhs);
 	}
 	std::cout << "ScavTrap copy assignment operator called\n";
 	return *this;
@@ -49,6 +49,10 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called for " << m_name << std::endl;
 }
 
+unsigned int ScavTrap::getEnergyPoints() const
+{
+	return m_energyPoints;
+}
 void ScavTrap::attack(const std::string& target)
 {
 	if(m_hitPoints > 0 && m_energyPoints > 0)

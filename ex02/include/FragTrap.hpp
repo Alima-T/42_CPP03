@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:16:17 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/12 22:06:44 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/15 15:22:46 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class FragTrap : public ClapTrap 
 {
-private:
-	std::string m_name; 
 public:
 	FragTrap();
 	FragTrap(const std::string& name);
