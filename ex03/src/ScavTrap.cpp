@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/15 16:09:53 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/15 18:18:10 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,6 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called for " << m_name << std::endl;
 }
 
-unsigned int ScavTrap::getEnergyPoints() const
-{
-	return m_energyPoints;
-}
 void ScavTrap::attack(const std::string& target)
 {
 	if(m_hitPoints > 0 && m_energyPoints > 0)

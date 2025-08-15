@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 16:45:56 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/08/15 17:55:03 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/08/15 18:17:51 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,13 +76,4 @@ void FragTrap::highFivesGuys(void)
 		std::cout << "FragTrap " << m_name << " can't request a HighFive without EnergyPoints or HitPoints!" 
 				  << " Energy: " << m_energyPoints << ", HitPoints: " << m_hitPoints << std::endl;
 	}
-}
-unsigned int FragTrap::getHitPoints() const
-{
-    return m_hitPoints;
-}
-
-unsigned int FragTrap::getAttackDamage() const
-{
-    return m_attackDamage;
 }
